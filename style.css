@@ -1,0 +1,980 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css?family=Raleway:400,700,800");
+html,
+body {
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+address,
+big,
+cite,
+code,
+em,
+font,
+img,
+small,
+strike,
+sub,
+sup,
+li,
+ol,
+ul,
+fieldset,
+form,
+label,
+legend,
+button,
+table,
+caption,
+tr,
+th,
+td {
+  border: none;
+  font-size: inherit;
+  line-height: inherit;
+  margin: 0;
+  padding: 0;
+  text-align: inherit;
+}
+
+blockquote::before,
+blockquote::after {
+  content: "";
+}
+
+/*
+* Skeleton V2.0.4
+* Copyright 2014, Dave Gamache
+* www.getskeleton.com
+* Free to use under the MIT license.
+* http://www.opensource.org/licenses/mit-license.php
+* 12/29/2014
+*/
+/* Table of contents
+––––––––––––––––––––––––––––––––––––––––––––––––––
+- Grid
+- Base Styles
+- Typography
+- Links
+- Buttons
+- Forms
+- Lists
+- Code
+- Tables
+- Spacing
+- Utilities
+- Clearing
+- Media Queries
+*/
+/* Grid
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.container {
+  position: relative;
+  width: 100%;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+.column,
+.columns {
+  width: 100%;
+  float: left;
+  box-sizing: border-box;
+}
+
+/* For devices larger than 400px */
+@media (min-width: 400px) {
+  .container {
+    width: 85%;
+    padding: 0;
+  }
+}
+/* For devices larger than 550px */
+@media (min-width: 550px) {
+  .container {
+    width: 80%;
+  }
+
+  .column,
+.columns {
+    margin-left: 4%;
+  }
+
+  .column:first-child,
+.columns:first-child {
+    margin-left: 0;
+  }
+
+  .one.column,
+.one.columns {
+    width: 4.6666666667%;
+  }
+
+  .two.columns {
+    width: 13.3333333333%;
+  }
+
+  .three.columns {
+    width: 22%;
+  }
+
+  .four.columns {
+    width: 30.6666666667%;
+  }
+
+  .five.columns {
+    width: 39.3333333333%;
+  }
+
+  .six.columns {
+    width: 48%;
+  }
+
+  .seven.columns {
+    width: 56.6666666667%;
+  }
+
+  .eight.columns {
+    width: 65.3333333333%;
+  }
+
+  .nine.columns {
+    width: 74%;
+  }
+
+  .ten.columns {
+    width: 82.6666666667%;
+  }
+
+  .eleven.columns {
+    width: 91.3333333333%;
+  }
+
+  .twelve.columns {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .one-third.column {
+    width: 30.6666666667%;
+  }
+
+  .two-thirds.column {
+    width: 65.3333333333%;
+  }
+
+  .one-half.column {
+    width: 48%;
+  }
+
+  /* Offsets */
+  .offset-by-one.column,
+.offset-by-one.columns {
+    margin-left: 8.6666666667%;
+  }
+
+  .offset-by-two.column,
+.offset-by-two.columns {
+    margin-left: 17.3333333333%;
+  }
+
+  .offset-by-three.column,
+.offset-by-three.columns {
+    margin-left: 26%;
+  }
+
+  .offset-by-four.column,
+.offset-by-four.columns {
+    margin-left: 34.6666666667%;
+  }
+
+  .offset-by-five.column,
+.offset-by-five.columns {
+    margin-left: 43.3333333333%;
+  }
+
+  .offset-by-six.column,
+.offset-by-six.columns {
+    margin-left: 52%;
+  }
+
+  .offset-by-seven.column,
+.offset-by-seven.columns {
+    margin-left: 60.6666666667%;
+  }
+
+  .offset-by-eight.column,
+.offset-by-eight.columns {
+    margin-left: 69.3333333333%;
+  }
+
+  .offset-by-nine.column,
+.offset-by-nine.columns {
+    margin-left: 78%;
+  }
+
+  .offset-by-ten.column,
+.offset-by-ten.columns {
+    margin-left: 86.6666666667%;
+  }
+
+  .offset-by-eleven.column,
+.offset-by-eleven.columns {
+    margin-left: 95.3333333333%;
+  }
+
+  .offset-by-one-third.column,
+.offset-by-one-third.columns {
+    margin-left: 34.6666666667%;
+  }
+
+  .offset-by-two-thirds.column,
+.offset-by-two-thirds.columns {
+    margin-left: 69.3333333333%;
+  }
+
+  .offset-by-one-half.column,
+.offset-by-one-half.columns {
+    margin-left: 52%;
+  }
+}
+/* Base Styles
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+/* NOTE
+html is set to 62.5% so that all the REM measurements throughout Skeleton
+are based on 10px sizing. So basically 1.5rem = 15px :) */
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.5em;
+  /* currently ems cause chrome bug misinterpreting rems on body element */
+  line-height: 1.6;
+  font-weight: 400;
+  font-family: "Raleway", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #222;
+}
+
+/* Typography
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+h1, h2, h3, h4, h5, h6 {
+  margin-top: 0;
+  margin-bottom: 2rem;
+  font-weight: 300;
+}
+
+h1 {
+  font-size: 4rem;
+  line-height: 1.2;
+  letter-spacing: -0.1rem;
+}
+
+h2 {
+  font-size: 3.6rem;
+  line-height: 1.25;
+  letter-spacing: -0.1rem;
+}
+
+h3 {
+  font-size: 3rem;
+  line-height: 1.3;
+  letter-spacing: -0.1rem;
+}
+
+h4 {
+  font-size: 2.4rem;
+  line-height: 1.35;
+  letter-spacing: -0.08rem;
+}
+
+h5 {
+  font-size: 1.8rem;
+  line-height: 1.5;
+  letter-spacing: -0.05rem;
+}
+
+h6 {
+  font-size: 1.5rem;
+  line-height: 1.6;
+  letter-spacing: 0;
+}
+
+/* Larger than phablet */
+@media (min-width: 550px) {
+  h1 {
+    font-size: 5rem;
+  }
+
+  h2 {
+    font-size: 4.2rem;
+  }
+
+  h3 {
+    font-size: 3.6rem;
+  }
+
+  h4 {
+    font-size: 3rem;
+  }
+
+  h5 {
+    font-size: 2.4rem;
+  }
+
+  h6 {
+    font-size: 1.5rem;
+  }
+}
+p {
+  margin-top: 0;
+}
+
+/* Links
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+a {
+  color: #1EAEDB;
+}
+
+a:hover {
+  color: #0FA0CE;
+}
+
+/* Buttons
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.button,
+button,
+input[type=submit],
+input[type=reset],
+input[type=button] {
+  display: inline-block;
+  height: 38px;
+  padding: 0 30px;
+  color: #555;
+  text-align: center;
+  font-size: 11px;
+  font-weight: 600;
+  line-height: 38px;
+  letter-spacing: 0.1rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  white-space: nowrap;
+  background-color: transparent;
+  border-radius: 4px;
+  border: 1px solid #bbb;
+  cursor: pointer;
+  box-sizing: border-box;
+}
+
+.button:hover,
+button:hover,
+input[type=submit]:hover,
+input[type=reset]:hover,
+input[type=button]:hover,
+.button:focus,
+button:focus,
+input[type=submit]:focus,
+input[type=reset]:focus,
+input[type=button]:focus {
+  color: #333;
+  border-color: #888;
+  outline: 0;
+}
+
+.button.button-primary,
+button.button-primary,
+input[type=submit].button-primary,
+input[type=reset].button-primary,
+input[type=button].button-primary {
+  color: #FFF;
+  background-color: #628ca6;
+  border-color: #33C3F0;
+}
+
+.button.button-primary:hover,
+button.button-primary:hover,
+input[type=submit].button-primary:hover,
+input[type=reset].button-primary:hover,
+input[type=button].button-primary:hover,
+.button.button-primary:focus,
+button.button-primary:focus,
+input[type=submit].button-primary:focus,
+input[type=reset].button-primary:focus,
+input[type=button].button-primary:focus {
+  color: #FFF;
+  background-color: #243751;
+  border-color: #1EAEDB;
+}
+
+/* Forms
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+input[type=email],
+input[type=number],
+input[type=search],
+input[type=text],
+input[type=tel],
+input[type=url],
+input[type=password],
+textarea,
+select {
+  height: 38px;
+  padding: 6px 10px;
+  /* The 6px vertically centers text on FF, ignored by Webkit */
+  background-color: #fff;
+  border: 1px solid #D1D1D1;
+  border-radius: 4px;
+  box-shadow: none;
+  box-sizing: border-box;
+}
+
+/* Removes awkward default styles on some inputs for iOS */
+input[type=email],
+input[type=number],
+input[type=search],
+input[type=text],
+input[type=tel],
+input[type=url],
+input[type=password],
+textarea {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+textarea {
+  min-height: 65px;
+  padding-top: 6px;
+  padding-bottom: 6px;
+}
+
+input[type=email]:focus,
+input[type=number]:focus,
+input[type=search]:focus,
+input[type=text]:focus,
+input[type=tel]:focus,
+input[type=url]:focus,
+input[type=password]:focus,
+textarea:focus,
+select:focus {
+  border: 1px solid #33C3F0;
+  outline: 0;
+}
+
+label,
+legend {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+fieldset {
+  padding: 0;
+  border-width: 0;
+}
+
+input[type=checkbox],
+input[type=radio] {
+  display: inline;
+}
+
+label > .label-body {
+  display: inline-block;
+  margin-left: 0.5rem;
+  font-weight: normal;
+}
+
+/* Lists
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+ul {
+  list-style: circle inside;
+}
+
+ol {
+  list-style: decimal inside;
+}
+
+ol, ul {
+  padding-left: 0;
+  margin-top: 0;
+}
+
+ul ul,
+ul ol,
+ol ol,
+ol ul {
+  margin: 1.5rem 0 1.5rem 3rem;
+  font-size: 90%;
+}
+
+li {
+  margin-bottom: 1rem;
+}
+
+/* Code
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+code {
+  padding: 0.2rem 0.5rem;
+  margin: 0 0.2rem;
+  font-size: 90%;
+  white-space: nowrap;
+  background: #F1F1F1;
+  border: 1px solid #E1E1E1;
+  border-radius: 4px;
+}
+
+pre > code {
+  display: block;
+  padding: 1rem 1.5rem;
+  white-space: pre;
+}
+
+/* Tables
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+th,
+td {
+  padding: 12px 15px;
+  text-align: left;
+  border-bottom: 1px solid #E1E1E1;
+}
+
+th:first-child,
+td:first-child {
+  padding-left: 0;
+}
+
+th:last-child,
+td:last-child {
+  padding-right: 0;
+}
+
+/* Spacing
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+button,
+.button {
+  margin-bottom: 1rem;
+}
+
+input,
+textarea,
+select,
+fieldset {
+  margin-bottom: 1.5rem;
+}
+
+pre,
+blockquote,
+dl,
+figure,
+table,
+p,
+ul,
+ol,
+form {
+  margin-bottom: 2.5rem;
+}
+
+/* Utilities
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.u-full-width {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.u-max-full-width {
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+.u-pull-right {
+  float: right;
+}
+
+.u-pull-left {
+  float: left;
+}
+
+/* Misc
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+hr {
+  margin-top: 3rem;
+  margin-bottom: 3.5rem;
+  border-width: 0;
+  border-top: 1px solid #E1E1E1;
+}
+
+/* Clearing
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+/* Self Clearing Goodness */
+.container:after,
+.row:after,
+.u-cf {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Media Queries
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+/*
+Note: The best way to structure the use of media queries is to create the queries
+near the relevant code. For example, if you wanted to change the styles for buttons
+on small devices, paste the mobile query code up in the buttons section and style it
+there.
+*/
+/* Larger than mobile */
+/* Larger than phablet (also point when grid becomes active) */
+/* Larger than tablet */
+/* Larger than desktop */
+/* Larger than Desktop HD */
+/* logo */
+.logo {
+  position: absolute;
+  z-index: 100;
+  background-color: #638da6;
+}
+
+.logo-img {
+  padding: 10px;
+  width: 300px;
+}
+
+/* home hero image */
+div#home-search {
+  display: flex;
+  justify-content: center;
+}
+
+/* nav */
+#main-nav {
+  padding-left: 350px;
+}
+#main-nav a {
+  text-decoration: none;
+}
+#main-nav li {
+  text-transform: uppercase;
+  list-style: none;
+}
+#main-nav > ul {
+  display: flex;
+  margin: 0;
+  padding-left: 0;
+}
+#main-nav > ul > li {
+  color: #fff;
+  display: block;
+  padding: 1rem 2rem 1rem 2rem;
+  position: relative;
+  transition-duration: 0.2s;
+}
+#main-nav > ul > li:hover {
+  font-weight: bold;
+}
+#main-nav > ul > li a {
+  color: black;
+}
+#main-nav > ul > li > ul {
+  padding: 0;
+}
+#main-nav > ul > li > ul li {
+  margin: 0;
+  padding: 5px;
+}
+#main-nav > ul > li > ul li:hover {
+  background: #628ca6;
+  font-weight: bold;
+  cursor: pointer;
+}
+#main-nav > ul > li > ul li:hover a {
+  outline: none;
+}
+#main-nav > ul > li:nth-last-child(2) {
+  margin-left: auto;
+}
+#main-nav > ul > li:nth-last-child(1) {
+  display: inline-block;
+  border: 3px solid #ffffff;
+  font-weight: bold;
+  border-radius: 10px;
+  background-color: #628ca6;
+}
+#main-nav ul li ul {
+  background: #243751;
+  z-index: 100;
+  visibility: hidden;
+  opacity: 0;
+  min-width: 250px;
+  position: absolute;
+  transition: all 0.5s ease;
+  left: 0;
+  display: none;
+}
+#main-nav ul li ul a {
+  color: white;
+}
+#main-nav ul li:hover > ul,
+#main-nav ul li:focus-within > ul,
+#main-nav ul li ul:hover,
+#main-nav ul li ul:focus {
+  visibility: visible;
+  opacity: 1;
+  display: block;
+}
+
+body, html {
+  height: 100%;
+  margin: 0;
+  font-family: "Raleway", sans-serif;
+}
+
+.front-page-container .header {
+  margin: 0px;
+}
+.front-page-container ul {
+  margin: 0px;
+}
+.front-page-container .front-page-body {
+  position: relative;
+  color: white;
+}
+.front-page-container .front-page-body .front-page-bg {
+  /* The image used */
+  background-image: url("img/front-page-hero-image.jpg");
+  /* Full height */
+  height: calc(100vh - 54px);
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.front-page-container .front-page-body .front-page-title {
+  position: absolute;
+  top: 15%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 40px;
+}
+.front-page-container .front-page-body .front-page-search {
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.front-page-agents {
+  background-color: #628ca6;
+  position: absolute;
+  bottom: 0%;
+  left: 0%;
+  width: 100%;
+}
+.front-page-agents .author-avatar.vcard {
+  display: flex;
+}
+.front-page-agents .author-avatar.vcard .agent-description {
+  display: flex;
+}
+
+.epl-search-form .epl-search-label {
+  display: none;
+}
+
+form.wpcf7-form {
+  background-color: #e9e6e1;
+  padding: 20px;
+}
+form.wpcf7-form input[type=text] {
+  background-color: #f7f8f8;
+}
+
+header {
+  margin-bottom: 80px;
+}
+
+.agents-block {
+  display: flex;
+  flex-direction: column;
+  background-color: #c2beb6;
+  color: white;
+  padding: 30px;
+}
+.agents-block .author-box-container {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 20px;
+}
+.agents-block .author-box-container h3,
+.agents-block .author-box-container h5 {
+  margin: 0;
+}
+.agents-block .author-box-container a {
+  font-weight: bold;
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+.agents-block .author-box-container .author-contact-details {
+  padding-left: 50px;
+}
+.agents-block .author-box-container .author-contact-email,
+.agents-block .author-box-container .author-contact-mobile-phone {
+  color: #243751;
+}
+
+.property-details {
+  color: #c2beb6;
+}
+.property-details .item-suburb {
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.sell-before-block {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: #243751;
+  color: white;
+  text-align: center;
+  height: 400px;
+}
+.sell-before-block .button {
+  color: white;
+}
+
+.advice-block {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  background-color: yellowgreen;
+  color: white;
+  text-align: center;
+  height: 400px;
+}
+.advice-block .button {
+  color: white;
+  align-self: flex-start;
+}
+
+/* property info table */
+.buyer-booklet-block {
+  background-color: #628ca6;
+  text-align: center;
+  text-transform: uppercase;
+  color: white;
+  padding: 10px 0 10px 0;
+  margin: 20px 0 50px 0;
+}
+.buyer-booklet-block h5,
+.buyer-booklet-block h6 {
+  margin: 0;
+}
+
+.property-meta-table {
+  background-color: #e9e6e1;
+}
+.property-meta-table .property-size-info {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  padding: 20px;
+  text-transform: uppercase;
+}
+.property-meta-table .property-size-info h5 {
+  margin: 0;
+}
+.property-meta-table .property-extra-info {
+  padding: 20px;
+  background-color: #f7f8f8;
+}
+.property-meta-table .property-extra-info .property-extra-info-block {
+  margin-bottom: 20px;
+}
+.property-meta-table .property-extra-info .property-extra-info-block .title {
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.wp-single-agent-page .entry-header {
+  margin-bottom: 50px;
+}
+.wp-single-agent-page .entry-header .entry-image {
+  width: 100%;
+  overflow: hidden;
+}
+.wp-single-agent-page .entry-header .entry-image img {
+  width: 100%;
+}
+.wp-single-agent-page .contact-block {
+  margin-bottom: 20px;
+}
+.wp-single-agent-page .contact-block h5 {
+  margin: 0;
+}
+.wp-single-agent-page .contact-block .label-email {
+  font-weight: 700;
+}
+
+.agents-container {
+  position: relative;
+  padding: 5px;
+}
+.agents-container .agents-container-title {
+  position: absolute;
+  top: -30px;
+  left: 0px;
+  background-color: #243751;
+  text-transform: uppercase;
+  padding: 10px 25px 10px 25px;
+}
+.agents-container h3,
+.agents-container h4,
+.agents-container h5,
+.agents-container h6 {
+  margin: 0;
+  line-height: 1.1;
+}
+.agents-container .agents-carousel {
+  display: flex;
+  flex-direction: row;
+  background-color: #628ca6;
+}
+.agents-container .agents-carousel .agent-block {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0 10px 0 10px;
+}
+.agents-container .agents-carousel .agent-block .agent-image-box img {
+  width: 100px;
+}
+.agents-container .agents-carousel .agent-block .agent-info-box {
+  max-width: 250px;
+  min-width: 250px;
+  padding-left: 10px;
+}
+.agents-container .agents-carousel .agent-block .agent-info-box .agent-name {
+  text-transform: uppercase;
+}
+.agents-container .agents-carousel .agent-block .agent-info-box .agent-details-box {
+  margin-bottom: 10px;
+}
+.agents-container .agents-carousel .agent-block .agent-info-box .agent-details-box .agent-mobile {
+  font-weight: bold;
+}
+
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,72 @@
+body, html {
+    height: 100%;
+    margin: 0;
+
+    font-family: 'Raleway', sans-serif;
+}
+
+.front-page-container {
+  .header {
+    margin: 0px;
+  }
+
+    ul {
+        margin: 0px;
+    }
+
+    .front-page-body {
+        position: relative;
+        color: white;
+            
+        .front-page-bg {
+            /* The image used */
+            background-image: url("img/front-page-hero-image.jpg");
+            /* Full height */
+            height:  calc(100vh - 54px);
+          
+            /* Center and scale the image nicely */
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+          }
+    
+          .front-page-title { 
+            position: absolute;
+            top: 15%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+    
+            font-size: 40px;
+          }
+    
+          .front-page-search { 
+            position: absolute;
+            top: 35%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+          }
+    }
+}
+
+.front-page-agents {
+  background-color: $color-secondary;
+  position: absolute;
+  bottom: 0%;
+  left: 0%;
+  width: 100%;
+
+  .author-avatar.vcard {
+    display: flex;
+
+    .agent-description {
+      display: flex;
+    }
+
+  }
+}
+
+
+.epl-search-form .epl-search-label {
+  display: none;
+}
+
