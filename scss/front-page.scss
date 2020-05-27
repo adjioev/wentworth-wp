@@ -19,10 +19,10 @@ body, html {
         color: white;
             
         .front-page-bg {
-            /* The image used */
+            /* The image used TODO: make it editable */
             background-image: url("img/front-page-hero-image.jpg");
             /* Full height */
-            height:  calc(100vh - 54px);
+            height:  calc(100vh - 60px);
           
             /* Center and scale the image nicely */
             background-position: center;
@@ -35,8 +35,6 @@ body, html {
             top: 15%;
             left: 50%;
             transform: translate(-50%, -50%);
-    
-            font-size: 40px;
           }
     
           .front-page-search { 

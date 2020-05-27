@@ -74,9 +74,11 @@ div#home-search {
       font-weight: bold;
       border-radius: 10px;
       background-color: $color-secondary;
+      a {
+        color: white;
+      }
     }
   }
-
 
   ul li ul {
     background: $color-primary;
