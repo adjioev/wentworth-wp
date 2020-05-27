@@ -13,7 +13,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 get_header(); ?>
-<section id="primary" class="site-content content epl-archive-default <?php echo esc_attr( epl_get_active_theme_name() ); ?>">
+<section id="primary" class="container site-content content epl-archive-default <?php echo esc_attr( epl_get_active_theme_name() ); ?>">
 	<div id="content" role="main">
 
     <?php echo do_shortcode('[listing_search post_type="property,rental" style="slim" search_other="off" search_car="on" modesearch_price="on"]'); ?>
@@ -60,6 +60,9 @@ get_header(); ?>
 
 
 
+<div class="front-page-agents">
+	<?php get_template_part('agents'); ?>
+</div>
 <?php
 #get_sidebar();
 #get_footer();
