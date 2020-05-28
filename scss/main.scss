@@ -11,6 +11,7 @@ header {
   margin-bottom: 80px;
 }
 
+// Style for agents on single property page
 .agents-block {
   display: flex;
   flex-direction: column;
@@ -137,12 +138,13 @@ header {
   }
 }
 
+// Agent personal page
 .wp-single-agent-page {
   .entry-header {
     margin-bottom: 50px;
     .entry-image {
       width: 100%;
-      // height:360px;
+      height:760px;
       overflow: hidden;
       img {
         width: 100%;
@@ -161,6 +163,7 @@ header {
 }
 
 // Style for the agents carousel
+
 .agents-container {
   position: relative;
   padding: 5px;

@@ -2,7 +2,13 @@
 	<?php get_header(); ?>
 
 	<main class="front-page-body">
-		<div class="front-page-bg"></div>
+		<!-- <div class="front-page-bg"></div> -->
+
+		<?php if (has_post_thumbnail( $post->ID ) ): ?>
+			<?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'single-post-thumbnail' ); ?>
+			<div id="front-page-bg" style="background-image: url('<?php echo $image[0]; ?>')">
+			</div>
+		<?php endif; ?>
 
 		<div class="front-page-title">
 			<?php 

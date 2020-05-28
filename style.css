@@ -702,6 +702,7 @@ div#home-search {
 }
 #main-nav > ul > li:nth-last-child(2) {
   margin-left: auto;
+  font-weight: bold;
 }
 #main-nav > ul > li:nth-last-child(1) {
   display: inline-block;
@@ -709,6 +710,9 @@ div#home-search {
   font-weight: bold;
   border-radius: 10px;
   background-color: #628ca6;
+}
+#main-nav > ul > li:nth-last-child(1) a {
+  color: white;
 }
 #main-nav ul li ul {
   background: #243751;
@@ -742,18 +746,18 @@ body, html {
 .front-page-container .header {
   margin: 0px;
 }
-.front-page-container ul {
+.front-page-container ul, .front-page-container li {
   margin: 0px;
 }
 .front-page-container .front-page-body {
   position: relative;
   color: white;
 }
-.front-page-container .front-page-body .front-page-bg {
-  /* The image used */
+.front-page-container .front-page-body #front-page-bg {
+  /* The image used TODO: make it editable */
   background-image: url("img/front-page-hero-image.jpg");
   /* Full height */
-  height: calc(100vh - 54px);
+  height: calc(100vh - 60px);
   /* Center and scale the image nicely */
   background-position: center;
   background-repeat: no-repeat;
@@ -764,7 +768,6 @@ body, html {
   top: 15%;
   left: 50%;
   transform: translate(-50%, -50%);
-  font-size: 40px;
 }
 .front-page-container .front-page-body .front-page-search {
   position: absolute;
@@ -871,16 +874,33 @@ header {
 
 /* property info table */
 .buyer-booklet-block {
+  position: relative;
   background-color: #628ca6;
   text-align: center;
   text-transform: uppercase;
   color: white;
   padding: 10px 0 10px 0;
-  margin: 20px 0 50px 0;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 35px;
 }
 .buyer-booklet-block h5,
 .buyer-booklet-block h6 {
   margin: 0;
+}
+.buyer-booklet-block .photo-block {
+  position: absolute;
+  right: -70px;
+  top: -35px;
+  display: flex;
+  flex-direction: column;
+}
+.buyer-booklet-block .photo-block img {
+  width: 70px;
+}
+
+.property-price-block {
+  margin: 20px 0 50px 0;
 }
 
 .property-meta-table {
@@ -914,6 +934,7 @@ header {
 }
 .wp-single-agent-page .entry-header .entry-image {
   width: 100%;
+  height: 760px;
   overflow: hidden;
 }
 .wp-single-agent-page .entry-header .entry-image img {
@@ -932,6 +953,7 @@ header {
 .agents-container {
   position: relative;
   padding: 5px;
+  color: white;
 }
 .agents-container .agents-container-title {
   position: absolute;
@@ -940,6 +962,7 @@ header {
   background-color: #243751;
   text-transform: uppercase;
   padding: 10px 25px 10px 25px;
+  z-index: 100;
 }
 .agents-container h3,
 .agents-container h4,
@@ -952,6 +975,9 @@ header {
   display: flex;
   flex-direction: row;
   background-color: #628ca6;
+  margin: auto;
+  padding: 10px;
+  width: 95%;
 }
 .agents-container .agents-carousel .agent-block {
   display: flex;
@@ -975,6 +1001,10 @@ header {
 }
 .agents-container .agents-carousel .agent-block .agent-info-box .agent-details-box .agent-mobile {
   font-weight: bold;
+}
+
+.epl-slider-single-wrapper {
+  margin-bottom: 50px;
 }
 
 /*# sourceMappingURL=style.css.map */
