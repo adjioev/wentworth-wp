@@ -12,6 +12,7 @@
           $position = $epl_author->get_author_position();
           $mobile = $epl_author->get_author_mobile();
           $slogan = $epl_author->get_author_slogan();
+          $permalink = apply_filters( 'epl_author_profile_link', get_author_posts_url( $epl_author->author_id ), $epl_author );
   ?>
     <div class="agent-block">
         <div class="agent-image-box">
