@@ -8,16 +8,25 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 ?>
+<?php
+	$ID = epl_listing_has_primary_agent(); //phpcs:ignore
+	if ( $ID ) {
+		$epl_author = new EPL_Author_meta( $ID ); //phpcs:ignore
+	} else {
+		$epl_author = new EPL_Author_meta( $post->post_author );
+	}
+	$SEC_ID = epl_listing_has_secondary_author();
+	if ( $SEC_ID ) {
+		$epl_author_secondary = new EPL_Author_meta( $SEC_ID );
+	}
+?>
 
 <div id="post-<?php the_ID(); ?>" <?php post_class( 'epl-listing-single epl-property-single view-expanded' ); ?>>
 	<div class="entry-content epl-content epl-clearfix container">
-
-
 		<div>
 			<?php do_action( 'epl_property_featured_image' ); ?>
 			<?php do_action( 'epl_buttons_single_property' ); ?>
 		</div>
-
 		<div class="row">
 			<div class="two-thirds column">
 				<div class="property-page-info">
@@ -45,7 +54,12 @@ if ( ! defined( 'ABSPATH' ) ) {
 						<h5>Sent to your phone</h5>
 					</div>
 					<div class="photo-block">
-
+						<?php do_action('epl_author_thumbnail', $epl_author); ?>
+						<?php
+							if ( $SEC_ID ) {
+								do_action('epl_author_thumbnail', $epl_author_secondary); 
+							}
+						?>
 					</div>
 				</div>
 
@@ -90,7 +104,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 			</div>
 		</div> 
 		
-
 		<div class="row">
 			<div class="agents-block">
 				<h3>About the Agents</h3>
