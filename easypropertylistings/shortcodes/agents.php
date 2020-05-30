@@ -20,13 +20,10 @@ foreach ( $atts as $atts_key => $atts_val ) {
 	} else {
 		${$atts_key} = sanitize_text_field( $atts_val );
 	}
+  $job_position = $atts['position'];
+
 }
 ?>
-<?php 
-    $job_position = $atts['position'];
-    echo ($job_position);
-?>
-
 
 <div class="agents-container">
   <div class="agents-container-title">

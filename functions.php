@@ -349,8 +349,7 @@ function agents_carousel( $atts ){
 	$attributes = shortcode_atts( array(
 		'position' => 'all',
 	), $atts );
-
-        ob_start();
+    ob_start();
 	epl_get_template_part('shortcodes/agents.php', array( 'atts' => $attributes ) );
 	return ob_get_clean();
 }

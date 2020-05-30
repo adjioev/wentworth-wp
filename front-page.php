@@ -18,12 +18,9 @@
 		</div>
 		<div class="front-page-search">
 			<?php echo do_shortcode('[listing_search post_type="property,rental" search_other="off" search_postcode="on"  view="wentworth" style="slim"]'); ?>
-		</div>			
-
+		</div>
 		<div class="front-page-agents">
-			<?php #get_template_part('agents'); ?>
 			<?php echo do_shortcode('[agents_carousel]'); ?>
-
 		</div>
 	</main>
 
