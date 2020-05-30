@@ -62,9 +62,8 @@ get_header(); ?>
 
 <div class="front-page-agents">
 	<?php 
-		echo esc_attr( epl_get_active_theme_name() );
 		$position = get_post_type() === "property" ? "sales agent" : "property manager" ;
-		 echo do_shortcode('[agents_carousel position="' . $position  .'"]'); 
+		echo do_shortcode('[agents_carousel position="' . $position  .'"]'); 
 	?>
 </div>
 <?php
