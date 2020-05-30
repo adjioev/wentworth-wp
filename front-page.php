@@ -21,10 +21,11 @@
 		</div>			
 
 		<div class="front-page-agents">
-			<?php get_template_part('agents'); ?>
+			<?php echo do_shortcode('[agents_carousel]'); ?>
+
 		</div>
 	</main>
 
-	<?php get_footer(); ?>
+	<?php #get_footer(); ?>
 </div>
 

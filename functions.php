@@ -343,6 +343,20 @@ function html5blankcomments($comment, $args, $depth)
 <?php }
 
 
+
+// Agents shortcut
+function agents_carousel( $atts ){
+	$attributes = shortcode_atts( array(
+		'position' => 'all',
+	), $atts );
+
+        ob_start();
+	epl_get_template_part('shortcodes/agents.php', array( 'atts' => $attributes ) );
+	return ob_get_clean();
+}
+add_shortcode( 'agents_carousel', 'agents_carousel' );
+
+
 // Wentworth theme functions
 function my_epl_custom_search_widget_templates($fields) {
 	$fields[] = array(
