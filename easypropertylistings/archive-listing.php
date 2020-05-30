@@ -33,9 +33,9 @@ get_header(); ?>
 					<?php do_action( 'epl_property_loop_start' ); ?>
 					<?php
 					while ( have_posts() ) : // The Loop.
-							the_post();
-							do_action( 'epl_property_blog' );
-						endwhile; // end of one post.
+						the_post();
+						do_action( 'epl_property_blog' );
+					endwhile; // end of one post.
 					?>
 					<?php do_action( 'epl_property_loop_end' ); ?>
 				</div>
@@ -61,7 +61,11 @@ get_header(); ?>
 
 
 <div class="front-page-agents">
-	<?php get_template_part('agents'); ?>
+	<?php 
+		echo esc_attr( epl_get_active_theme_name() );
+		$position = get_post_type() === "property" ? "sales agent" : "property manager" ;
+		 echo do_shortcode('[agents_carousel position="' . $position  .'"]'); 
+	?>
 </div>
 <?php
 #get_sidebar();
