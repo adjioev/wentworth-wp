@@ -1,0 +1,25 @@
+.footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    background-color: $color-secondary;
+    color: white;
+
+
+    .footer-logo {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        z-index: 100;
+        // background-color: #638da6;
+        padding: 10px;
+        .logo-img {
+          width: 80px;
+          margin-bottom: 10px;
+        }
+        .logo-text {
+          width: 150px;
+          margin-bottom: 10px;
+        }
+      }
+}
