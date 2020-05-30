@@ -1,15 +1,23 @@
 /* logo */
 .logo {
   position: absolute;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
   z-index: 100;
-  background-color: #638da6;
+  background-color: $color-secondary;
+  padding: 10px;
+  .logo-img {
+    width: 80px;
+    // margin-bottom: 10px;
+  }
+  .logo-text {
+    width: 150px;
+    // margin-bottom: 10px;
+  }
 }
 
-.logo-img {
-  // display: none;
-  padding: 10px;
-  width: 300px;
-}
+
 /* home hero image */
 div#home-search {
   display: flex;
@@ -18,7 +26,7 @@ div#home-search {
 
 /* nav */
 #main-nav {
-  padding-left: 350px;
+  padding-left: 200px;
   a {
     text-decoration: none;
   }
