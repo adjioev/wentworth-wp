@@ -4,10 +4,9 @@
 						<h5>What would you like to do?</h5>
 					</div>
 					<div class="footer-menu">
-						<div>Sell</div>
-						<div>Buy</div>
-						<div>Manage</div>
-						<div>Rent</div>
+						<?php wp_nav_menu(array(
+							'menu' => 'FooterMenu'
+						)) ?>
 					</div>
 
 					<div class="footer-logo">
