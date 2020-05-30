@@ -33,11 +33,12 @@
 					<!-- logo -->
 					<div class="logo">
 						<a href="<?php echo home_url(); ?>">
-							<img class="logo-img" src="<?php echo get_template_directory_uri(); ?>/img/WWlogo_tranparent.png" alt="Logo">
+							<div class="logo-img-block">
+								<img class="logo-img" src="<?php echo get_template_directory_uri(); ?>/img/WWlogo_tranparent.png" alt="Logo">
+								<img class="logo-text" src="<?php echo get_template_directory_uri(); ?>/img/logo.png" alt="Logo">
+							</div>
 						</a>
-						<a href="<?php echo home_url(); ?>">
-							<img class="logo-text" src="<?php echo get_template_directory_uri(); ?>/img/logo.png" alt="Logo">
-						</a>						
+
 					</div>
 					<!-- /logo -->
 

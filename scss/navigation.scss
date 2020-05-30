@@ -1,19 +1,21 @@
 /* logo */
 .logo {
   position: absolute;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
   z-index: 100;
   background-color: $color-secondary;
   padding: 10px;
-  .logo-img {
-    width: 80px;
-    // margin-bottom: 10px;
-  }
-  .logo-text {
-    width: 150px;
-    // margin-bottom: 10px;
+
+  .logo-img-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .logo-img {
+      width: 60px;
+      margin-bottom: 10px;
+    }
+    .logo-text {
+      width: 120px;
+    }
   }
 }
 

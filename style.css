@@ -642,12 +642,20 @@ there.
 .logo {
   position: absolute;
   z-index: 100;
-  background-color: #638da6;
-}
-
-.logo-img {
+  background-color: #628ca6;
   padding: 10px;
-  width: 300px;
+}
+.logo .logo-img-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.logo .logo-img-block .logo-img {
+  width: 60px;
+  margin-bottom: 10px;
+}
+.logo .logo-img-block .logo-text {
+  width: 120px;
 }
 
 /* home hero image */
@@ -658,7 +666,7 @@ div#home-search {
 
 /* nav */
 #main-nav {
-  padding-left: 350px;
+  padding-left: 200px;
 }
 #main-nav a {
   text-decoration: none;
@@ -737,6 +745,29 @@ div#home-search {
   display: block;
 }
 
+.footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  background-color: #628ca6;
+  color: white;
+}
+.footer .footer-logo {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  z-index: 100;
+  padding: 10px;
+}
+.footer .footer-logo .logo-img {
+  width: 80px;
+  margin-bottom: 10px;
+}
+.footer .footer-logo .logo-text {
+  width: 150px;
+  margin-bottom: 10px;
+}
+
 body, html {
   height: 100%;
   margin: 0;
@@ -757,7 +788,7 @@ body, html {
   /* The image used TODO: make it editable */
   background-image: url("img/front-page-hero-image.jpg");
   /* Full height */
-  height: calc(100vh - 60px);
+  height: calc(100vh - 50px);
   /* Center and scale the image nicely */
   background-position: center;
   background-repeat: no-repeat;
