@@ -13,6 +13,9 @@ body, html {
     ul, li {
         margin: 0px;
     }
+    .front-page-agents {
+      position: absolute;
+    }
 
     .front-page-body {
         position: relative;
@@ -48,7 +51,6 @@ body, html {
 
 .front-page-agents {
   background-color: $color-secondary;
-  position: absolute;
   bottom: 0%;
   left: 0%;
   width: 100%;
@@ -68,3 +70,37 @@ body, html {
   display: none;
 }
 
+// Sell/Manage page
+
+.hero-image-block {
+  .hero-image {
+    /* Center and scale the image nicely */
+    // background-position: center;
+    // background-repeat: no-repeat;
+    // background-size: cover;
+  }
+  .hero-content-block {
+    background-size: cover;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    padding-top: 0px;
+    height: 800px;
+    .title {
+      // padding: 100px 0 50px 0;
+      padding-bottom: 50px;
+    }
+    .content-buttons {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      width: 100%;
+      a {
+        width: 500px;
+      }
+    }
+  }
+}
