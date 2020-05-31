@@ -12,7 +12,7 @@
 // Exit if accessed directly
 if ( ! defined( 'ABSPATH' ) ) exit;
 ?>
-<H3>sIMPLE CARD</H3>
+
 <div id="post-<?php the_ID(); ?>" class="epl-author-child epl-author-archive epl-author-simple epl-author-card epl-author <?php echo $grid_class; ?>">
 	<div class="entry-content">
 		<div class="epl-author-box epl-author-image">
