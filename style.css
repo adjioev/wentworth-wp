@@ -674,6 +674,7 @@ div#home-search {
 #main-nav li {
   text-transform: uppercase;
   list-style: none;
+  margin: 0px;
 }
 #main-nav > ul {
   display: flex;
@@ -745,6 +746,11 @@ div#home-search {
   display: block;
 }
 
+.team-grid-container {
+  display: grid;
+  grid-gap: 50px;
+}
+
 .footer {
   display: flex;
   flex-direction: row;
@@ -808,10 +814,10 @@ body, html {
 }
 
 .front-page-agents {
-  background-color: #628ca6;
-  position: absolute;
+  position: fixed;
   bottom: 0%;
   left: 0%;
+  background-color: #628ca6;
   width: 100%;
 }
 .front-page-agents .author-avatar.vcard {
@@ -823,6 +829,32 @@ body, html {
 
 .epl-search-form .epl-search-label {
   display: none;
+}
+
+.hero-image-block .hero-image {
+  /* Center and scale the image nicely */
+}
+.hero-image-block .hero-content-block {
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  padding-top: 0px;
+  height: 800px;
+}
+.hero-image-block .hero-content-block .title {
+  padding-bottom: 50px;
+}
+.hero-image-block .hero-content-block .content-buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+}
+.hero-image-block .hero-content-block .content-buttons a {
+  width: 500px;
 }
 
 form.wpcf7-form {
@@ -988,7 +1020,7 @@ header {
 }
 .agents-container .agents-container-title {
   position: absolute;
-  top: -30px;
+  top: -35px;
   left: 0px;
   background-color: #243751;
   text-transform: uppercase;
@@ -1013,15 +1045,14 @@ header {
 .agents-container .agents-carousel .agent-block {
   display: flex;
   flex-direction: row;
-  align-items: center;
   padding: 0 10px 0 10px;
 }
 .agents-container .agents-carousel .agent-block .agent-image-box img {
   width: 100px;
 }
 .agents-container .agents-carousel .agent-block .agent-info-box {
-  max-width: 250px;
-  min-width: 250px;
+  max-width: 300px;
+  min-width: 300px;
   padding-left: 10px;
 }
 .agents-container .agents-carousel .agent-block .agent-info-box .agent-name {
@@ -1035,7 +1066,7 @@ header {
 }
 
 .epl-slider-single-wrapper {
-  margin-bottom: 50px;
+  margin-bottom: 45px;
 }
 
 /*# sourceMappingURL=style.css.map */
